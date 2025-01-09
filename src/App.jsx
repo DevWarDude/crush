@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Home from "./Home"; // Adjust this import path based on your project structure.
+import Loader from "./Loader";
 
 const App = () => {
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
@@ -15,31 +16,11 @@ const App = () => {
   }, []);
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
+    <div className="h-[100vh] w-screen bg-black flex items-center justify-center">
       {isLoading ? (
-        <div className="dot-spinner flex justify-center items-center h-full">
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-        </div>
+        <Loader />
       ) : (
         <div className="h-full w-full">
-          <video autoPlay loop muted className="w-full h-full object-cover">
-            <source
-              src={`${
-                hideQuestion
-                  ? "./IMG_2813.MP4"
-                  : "./7565825-hd_2048_1080_25fps.mp4"
-              }`}
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
           <Home
             isAudioEnabled={isAudioEnabled}
             setIsAudioEnabled={setIsAudioEnabled}

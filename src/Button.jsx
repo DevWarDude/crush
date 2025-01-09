@@ -15,11 +15,9 @@ const Button = (prop) => {
       const buttonWidth = buttonRect.width;
       const buttonHeight = buttonRect.height;
 
-      // Calculate max x and y positions to keep the button fully visible
       const maxX = viewportWidth - buttonWidth;
       const maxY = viewportHeight - buttonHeight;
 
-      // Generate random positions within the allowed range
       const x = Math.random() * maxX;
       const y = Math.random() * maxY;
 
