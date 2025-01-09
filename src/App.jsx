@@ -16,7 +16,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="h-[100vh] w-screen bg-black flex items-center justify-center">
+    <div className="h-[100vh] w-screen flex items-center justify-center">
       {isLoading ? (
         <Loader />
       ) : (
