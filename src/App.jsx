@@ -6,7 +6,7 @@ const App = () => {
   const [hideQuestion, setHideQuestion] = useState(false);
 
   return (
-    <div className="">
+    <div className="h-[100vh]">
       <video
         autoPlay
         loop

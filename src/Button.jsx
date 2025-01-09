@@ -42,7 +42,7 @@ const Button = (prop) => {
 
   return (
     <button
-      className={`px-9 py-4 text-white font-semibold text-2xl bg-purple-500 rounded-full border-0 shadow-2xl  font-jost tracking-wide ${prop.className} w-[220px] text-nowrap`}
+      className={`px-9 py-4 text-white font-semibold text-xl bg-purple-500 rounded-full border-0 shadow-2xl  font-jost tracking-wide ${prop.className} text-nowrap`}
       onClick={prop.onClick}
     >
       {prop.text}

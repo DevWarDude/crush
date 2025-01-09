@@ -25,7 +25,7 @@ export default function Home(prop) {
     }
   }, [prop.isAudioEnabled]);
   return (
-    <div className="flex items-center w-full justify-center pt-5 px-4 flex-col gap-10 relative z-40">
+    <div className="flex items-center w-full justify-center pt-5 px-4 flex-col gap-10 relative z-40 h-full pb-4">
       <audio
         ref={audioRef}
         src="./Asake - My Heart (Official Visualizer).mp3"
@@ -39,14 +39,14 @@ export default function Home(prop) {
         <LazyLoadImage
           alt="Lazy Image"
           src={`${"./giphy (1).webp"}`}
-          className="rounded-3xl"
+          className="rounded-3xl h-[250px] w-[100vw] object-cover"
         />
       </div>
       <div>
         <p
           className={`${
             prop.hideQuestion ? "hidden" : "flex"
-          } font-cursive font-bold text-start  mt-4 leading-[60px] tracking-wide  text-4xl btn-shine `}
+          } font-cursive font-bold text-center  leading-[60px] tracking-wide  text-3xl btn-shine `}
         >
           Hey, Temiloluwa Glory Osinuga, will you be my girlfriend
         </p>
