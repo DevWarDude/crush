@@ -25,7 +25,7 @@ export default function Home(prop) {
     }
   }, [prop.isAudioEnabled]);
   return (
-    <div className="flex items-center w-full justify-center pt-5 px-4 flex-col gap-10 relative z-40 h-full pb-4">
+    <div className="flex items-center w-full justify-start pt-5 px-4 flex-col gap-10 z-40 h-full pb-10 absolute top-0 left-0">
       <audio
         ref={audioRef}
         src="./Asake - My Heart (Official Visualizer).mp3"
@@ -68,7 +68,7 @@ export default function Home(prop) {
       <div
         className={`${
           prop.hideQuestion ? "hidden" : "flex"
-        } flex flex-col gap-5`}
+        } flex flex-col gap-3 -mt-4`}
       >
         <Button
           text="Yes"
