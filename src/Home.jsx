@@ -33,11 +33,13 @@ export default function Home(prop) {
       { display: "flex" },
       { display: "none", duration: 5 }
     );
-    gsap.fromTo(
-      ".showpage",
-      { display: "none" },
-      { display: "flex", duration: 5 }
-    );
+    setTimeout(() => {
+      gsap.fromTo(
+        ".showpage",
+        { display: "none" },
+        { display: "flex", duration: 5 }
+      );
+    }, 5000);
   }, [showVideo]);
 
   return (
@@ -121,23 +123,26 @@ export default function Home(prop) {
             isAudioEnabled={prop.isAudioEnabled}
           />
         </div>
-        {showVideo && (
-          <div className="flex items-center justify-center">
-            <Celebration className="absolute z-[999999] left-[50%] translate-x-[-50%]" />
-            <div className="flex gap-16 flex-col absolute top-[30px] justify-center items-center">
-              <Button
-                className="wrap z-[999999]  tracking-wide w-[80vw]"
-                text="I Love You or do I?"
-              />
 
-              <LazyLoadImage
-                alt="Lazy Image"
-                src={`${"./200.webp"}`}
-                className="rounded-3xl h-[200px] object-cover "
-              />
-            </div>
+        <div
+          className={`flex items-start justify-center ${
+            showVideo ? "hidepage " : "hidden"
+          }`}
+        >
+          <Celebration className="absolute z-[999999] left-[50%] translate-x-[-50%]" />
+          <div className="flex gap-16 flex-col absolute top-[30px] justify-center items-center">
+            <Button
+              className="wrap z-[999999]  tracking-wide w-[80vw]"
+              text="I Love You or do I?"
+            />
+
+            <LazyLoadImage
+              alt="Lazy Image"
+              src={`${"./200.webp"}`}
+              className="rounded-3xl h-[200px] object-cover "
+            />
           </div>
-        )}
+        </div>
       </div>
 
       <div
