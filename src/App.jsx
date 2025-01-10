@@ -18,9 +18,11 @@ const App = () => {
       { display: "none", duration: 0 }
     );
 
-    window.addEventListener("load", () => {
+    window.addEventListener("load", () => {});
+
+    setTimeout(() => {
       setLoaded(true);
-    });
+    }, 5000);
 
     return () => clearTimeout();
   }, [loaded]);
