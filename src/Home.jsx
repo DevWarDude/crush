@@ -40,6 +40,13 @@ export default function Home(prop) {
         { display: "flex", duration: 5 }
       );
     }, 5000);
+    setTimeout(() => {
+      gsap.fromTo(
+        ".showNewVideo",
+        { display: "none" },
+        { display: "flex", duration: 5 }
+      );
+    }, 12000);
   }, [showVideo]);
 
   return (
@@ -162,6 +169,26 @@ export default function Home(prop) {
           className="w-full absolute h-[100vh] object-cover"
         >
           <source src="./IMG_2813.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div
+        className={`hidden ${
+          showVideo ? "showNewVideo items-start justify-center" : "hidden"
+        }`}
+      >
+        <Button
+          className="wrap absolute z-50 top-[20px] tracking-wide"
+          text="My girlfriend y'all "
+        />
+        <Celebration className=" z-[9] left-[50%] translate-x-[-50%]" />
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-full absolute h-[100vh] object-cover"
+        >
+          <source src="./IMG_2844.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
