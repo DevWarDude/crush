@@ -24,7 +24,7 @@ const App = () => {
       setLoaded(true);
     }, 5000);
 
-    return () => clearTimeout();
+    // return () => clearTimeout();
   }, [loaded]);
 
   return (

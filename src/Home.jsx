@@ -55,7 +55,7 @@ export default function Home(prop) {
           autoPlay
           loop
           muted
-          className="w-full absolute h-[100vh] object-cover"
+          className="w-full absolute h-[100vh] object-cover z-0"
         >
           <source src="./7565825-hd_2048_1080_25fps.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -114,7 +114,7 @@ export default function Home(prop) {
           />
           <Button
             text="NO, I'm Sorry"
-            className="animated-btn absolute top-0 left-0"
+            className="animated-btn absolute z-30 top-0 left-0"
             isAudioEnabled={prop.isAudioEnabled}
           />
           <Button

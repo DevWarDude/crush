@@ -127,3 +127,8 @@
     opacity: 1;
   }
 }
+
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
